@@ -25,6 +25,8 @@ def Fighter():
     intimidation_chosen = False
     perception_chosen = False
     survival_chosen = False
+
+# How to choose only 2 and move to next step? Not sure yet. Maybe counting the "False" or "True" values.    
     
     while True:
         choice = raw_input(">")
