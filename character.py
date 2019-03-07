@@ -16,6 +16,16 @@ class Abilities:
         self.wisdom = wisdom
         self.charisma = charisma
 
+    @staticmethod
+    def random_abilities(min_value=3, max_value=18):
+        return Abilities(
+            random.randint(min_value, max_value),
+            random.randint(min_value, max_value),
+            random.randint(min_value, max_value),
+            random.randint(min_value, max_value),
+            random.randint(min_value, max_value),
+            random.randint(min_value, max_value))
+
     def __str__(self):
         "Produce a string representation of the stats."
         return "STR = {}\nDEX = {}\nCON = {}\nINT = {}\nWIS = {}\nCHR = {}".format(
@@ -34,7 +44,7 @@ class Character(object):
         self.skills = set()  # skills are initially empty
 
     def __str__(self):
-        return "{}\nRace: {}\nClass: {}\nStats:\n{}\nSkills: {}".format(
+        return "{}\nRace: {}\nClass: {}\nAbilities:\n{}\nSkills: {}".format(
             self.name, self.race_name, self.class_name, self.stats, self.skills)
 
 
@@ -217,14 +227,7 @@ def make_character():
     # selecting a class. A cleric with wisdom 3 is a sad thing indeed.
 
     # First randomly generate the stats
-    abilities = Abilities(
-        random.randint(3, 18),
-        random.randint(3, 18),
-        random.randint(3, 18),
-        random.randint(3, 18),
-        random.randint(3, 18),
-        random.randint(3, 18))
-
+    abilities = Abilities.random_abilities()
     abilities = race.apply_bonus(abilities)
 
     character = Character(name, race.name, klass.name, abilities)
