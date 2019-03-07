@@ -224,7 +224,7 @@ def make_character():
     klass = select_class(ALL_KLASSES)
 
     # TODO: Perhaps it would be better to let them see their stats before
-    # selecting a class. A cleric with wisdom 3 is a sad thing indeed.
+    # selecting a class. A cleric with wisdom 3 is a sad thing indeed, but such is the life he leads.
 
     # First randomly generate the stats
     abilities = Abilities.random_abilities()
