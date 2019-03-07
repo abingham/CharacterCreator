@@ -10,4 +10,4 @@ def Intelligence()
 
 def Wisdom()
 
-def Charisma
+def Charisma()
