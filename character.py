@@ -11,5 +11,9 @@ def start():
     
   choice = raw_input(">")
   
+  if choice == Human
+  elif choice == Dwarf
+  elif choice == Elf
+  
 
 start()
