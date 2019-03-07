@@ -17,48 +17,76 @@ def Fighter():
     print "6. Intimidation"
     print "7. Perception"
     print "8. Survival"
+    acrobatics_chosen = False
+    animal_handling_chosen = False
+    athletics_chosen = False
+    history_chosen = False
+    insight_chosen = False
+    intimidation_chosen = False
+    perception_chosen = False
+    survival_chosen = False
     
-    
-  choice = raw_input(">")
+    while True:
+        choice = raw_input(">")
   
-  if choice == "1" or "Acrobatics":
-    Acrobatics()
-  elif choice == "2" or "Animal Handling":
-    Animal Handling()
-  elif choice == "3" or "Athletics":
-    Athletics()
+        if choice == "1" or "Acrobatics":
+            acrobatics_chosen = True
+#           Acrobatics()
+        elif choice == "2" or "Animal Handling":
+            animal_hanlding_chosen = True
+#           Animal Handling()
+        elif choice == "3" or "Athletics":
+            athletics_chosen = True
+#           Athletics()
+        elif choice == "4" or "History":
+            history_chosen = True
+#           History()
+        elif choice == "5" or "Insight":
+            insight_chosen = True
+#           Insight()
+        elif choice == "6" or "Intimidation":
+            intimidation_chosen = True
+#           Intimidation()
+        elif choice == "7" or "Perception":
+            perception_chosen = True
+#           Perception()
+        elif choice == "8" or "Survival":
+            survival_chosen = True
+#            Survival()
   
 
 def Human():
-  print "A Human receives +1 to all abilities."
-  print "Choose a class from the following:"
-  print "Fighter"
-  print "Druid"
-  print "Wizard"
-  print "Cleric"
-  print "Monk"
-  
-  choice = raw_input(">")
-  
-  if choice == "Fighter":
-    Fighter()
-  elif choice == "Druid":
-    Druid()
-  elif choice == "Wizard":
-    Wizard()
-  elif choice == "Cleric":
-    Cleric()
-  elif choice == "Monk":
-    Monk()
-  elif choice == "back":
-    start()
+    print "A Human receives +1 to all abilities."
+    print "Choose a class from the following:"
+    print "Fighter"
+    print "Druid"
+    print "Wizard"
+    print "Cleric"
+    print "Monk"
     
-  strength
-  dexterity
-  constitution
-  Intelligence
-  Wisdom
-  Charisma
+    choice = raw_input(">")
+  
+        if choice == "Fighter":
+            Fighter()
+        elif choice == "Druid":
+            Druid()
+        elif choice == "Wizard":
+            Wizard()
+        elif choice == "Cleric":
+            Cleric()
+        elif choice == "Monk":
+            Monk()
+        elif choice == "back":
+            start()
+        else
+            Human()
+    
+  # strength
+  # dexterity
+  # constitution
+  # Intelligence
+  # Wisdom
+  # Charisma
   
 # +1 to all abilities
 
@@ -69,21 +97,21 @@ def Elf():
 # +2 Dexterity, +1 Intelligence, +1 Wisom
 
 def start():
-  print "Choose a race from the following:"
-  print "Human"
-  print "Dwarf"
-  print "Elf"
+    print "Choose a race from the following:"
+    print "Human"
+    print "Dwarf"
+    print "Elf"
     
-  choice = raw_input(">")
+    choice = raw_input(">")
   
-  if choice == "Human":
-    Human()
-  elif choice == "Dwarf":
-    Dwarf()
-  elif choice == "Elf":
-    Elf()
-  else:
-    start()
+        if choice == "Human":
+            Human()
+        elif choice == "Dwarf":
+            Dwarf()
+        elif choice == "Elf":
+            Elf()
+        else
+            start()
   
 
 start()
