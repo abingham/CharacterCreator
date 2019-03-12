@@ -20,6 +20,17 @@ To list the fields in the input template (useful for development)::
 
     python character_sheet.py --fields TWC-DnD-5E-Character_sheet-v1.6.pdf
 
+Future work ideas:
+
+- It would probably be better to separate character sheet generation from
+  character generation. The character creation phase could export the character
+  to JSON or something, and sheet generation could read that JSON.
+
+- Fix the template so that the field names don't have spurious spaces. Or just
+  create out own template. In fact, the "template" could be entirely in Python
+  with no need for an external PDF, but this might be more trouble than it's
+  worth.
+
 """
 
 import sys
