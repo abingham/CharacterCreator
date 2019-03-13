@@ -63,6 +63,7 @@ def character_to_fields(character, fields):
     fields['Race '] = character.race_name
     fields['STR'] = character.stats.strength
     fields['DEX'] = character.stats.dexterity
+    fields['ClassLevel'] = "{} {}".format(character.class_name, 0)
 
     # TODO: Fill in `fields` with the rest of the character information.
 
