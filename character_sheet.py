@@ -47,7 +47,7 @@ def update_fields(pdf, fields):
 
 
 def show_fields(filename):
-    with open(filename, mode='rt') as handle:
+    with open(filename, mode='rb') as handle:
         pdf = PyPDF2.PdfFileReader(handle)
         fields = pdf.getFormTextFields()
         for field in sorted(fields):
